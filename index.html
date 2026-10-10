@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIIDIE ABRAHAM | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#home" class="logo">MIIDIE ABRAHAM</a>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
+        <a href="#about">About</a>
+        <a href="#lessons">Lessons Learned</a>
+        <a href="#projects">Projects</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h1>SEEKING THE WISDOM OF OUTLIERS</h1>
+      <p>STOIC LAD</p>
+      <a href="#projects" class="btn">View my projects</a>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        I am a passionate developer and learner, always seeking to expand my
+        knowledge and skills in the field of technology.
+      </p>
+    </section>
+
+    <section id="lessons">
+      <h2>Lessons Learned</h2>
+
+      <article>
+        <img
+          src="images/lesson-stoic.jpg"
+          alt="Stoic statue"
+          class="card-photo"
+        />
+        <h3>WE OUGHT TO BE STOIC</h3>
+        <p>
+          Being a Stoic means always Living with Courage, Seeking Wisdom,
+          Practicing Temperance and Serving Justice.
+        </p>
+        <p>Oct 7, 2026</p>
+        <a href="lesson-1.html">Read more</a>
+      </article>
+
+      <article>
+        <img
+          src="images/lesson-vision.jpg"
+          alt="Looking toward the horizon"
+          class="card-photo"
+        />
+        <h3>THE POWER OF VISION</h3>
+        <p>
+          Having a clear vision of what you want to achieve is crucial for
+          success, thus A man must have a quest.
+        </p>
+        <p>Oct 7, 2026</p>
+        <a href="lesson-2.html">Read more</a>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article>
+        <h3>My Portfolio Website</h3>
+        <p>
+          This is my personal portfolio website, where I showcase my skills,
+          projects, and experiences as a developer. It serves as a platform to
+          connect with potential clients and collaborators.
+        </p>
+        <p>HTML · CSS · JavaScript</p>
+        <div class="card-links">
+          <a
+            href="https://github.com/abrahammiidie-svg"
+            target="_blank"
+            rel="noopener"
+            >View code</a
+          >
+        </div>
+      </article>
+
+      <article class="coming-soon">
+        <h3>Next Project</h3>
+        <p>Something new is being built. Check back soon.</p>
+        <p>In progress</p>
+      </article>
+    </section>
+
+    <section id="podcast">
+      <h2>Podcast</h2>
+      <img
+        src="images/podcast.jpg"
+        alt="Podcast recording session"
+        class="section-photo"
+      />
+      <p>COMING SOON</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <img src="images/contact.jpg" alt="Photo of me" class="section-photo" />
+      <p>miidieaj@gmail.com</p>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a
+          href="https://x.com/MiidieAbraham"
+          class="x"
+          aria-label="X"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://youtube.com/@wisdomofoutliers?si=0eVU-UzG5NpKEM3P"
+          class="youtube"
+          aria-label="YouTube"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/miidie-aj-b11b8b391?utm_source=share_via&utm_
+            content=profile&utm_medium=member_android"
+          class="linkedin"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a
+          href="https://github.com/abrahammiidie-svg"
+          class="github"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/miidie_usta?stkn=NzJnNWQ3bGtra2pw "
+          class="instagram"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/miidie.aj"
+          class="facebook"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://wa.me/+256765844681"
+          class="whatsapp"
+          aria-label="WhatsApp"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
+
+      <p>&copy; Copyright 2026. Miidie Abraham</p>
+    </footer>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      // Open or close the menu when the button is tapped
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen);
+        toggle.innerHTML = isOpen ? "&times;" : "&#9776;";
+      });
+
+      // Close the menu after a link is tapped
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.innerHTML = "&#9776;";
+        });
+      });
+    </script>
+  </body>
+</html>

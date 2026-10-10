@@ -1,0 +1,378 @@
+/* ---------- COLORS (change them here and the whole site changes) ---------- */
+:root {
+  --black: #05070d;
+  --navy: #0a1a33;
+  --blue: #1d4ea2;
+  --sky: #2fa4e7;
+  --light: #e3f1fc;
+  --white: #f7fafd;
+}
+
+/* ---------- BASICS ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--white);
+  color: var(--navy);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(5, 7, 13, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--sky);
+}
+
+nav a.logo {
+  font-family: "Anton", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--sky);
+  margin-right: auto;
+}
+
+/* ---------- HERO (the big top section) ---------- */
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 140px max(24px, calc((100% - 1100px) / 2)) 80px;
+  background:linear-gradient(160deg, rgba(5, 7, 13, 0.92) 0%, rgba(10, 26, 51, 0.55) 55%,
+   rgba(29, 78, 162, 0.35) , rgba(29, 78, 162, 0.15)),
+    url('images/hero.jpg') center top / cover no-repeat;}
+
+#home h1 {
+  font-size: clamp(2.8rem, 9vw, 6rem);
+  max-width: 14ch;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+#home p {
+  font-size: 1.25rem;
+  margin-top: 16px;
+  color: var(--sky);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+.btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 32px;
+  background: var(--sky);
+  color: var(--black);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* ---------- ALL OTHER SECTIONS ---------- */
+section:not(#home) {
+  padding: 80px max(24px, calc((100% - 900px) / 2));
+}
+
+section:not(#home) h2 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  margin-bottom: 24px;
+}
+
+section:not(#home) h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--sky);
+  margin-top: 12px;
+}
+
+#about {
+  background: var(--white);
+}
+#lessons {
+  background: var(--light);
+}
+#projects {
+  background: var(--white);
+}
+#contact {
+  background: var(--light);
+}
+
+#podcast {
+  background: var(--navy);
+  color: #fff;
+}
+
+/* ---------- LESSONS LEARNED CARDS ---------- */
+#lessons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+#lessons > h2,
+#lessons > p {
+  grid-column: 1 / -1;
+}
+
+article {
+  background: #fff;
+  padding: 28px;
+  border-top: 4px solid var(--sky);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(10, 26, 51, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+article:hover {
+  transform: translateY(-4px);
+}
+
+article h3 {
+  font-size: 1.6rem;
+}
+
+article p:last-of-type {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+article a {
+  margin-top: auto;
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+article a:hover {
+  color: var(--sky);
+}
+
+/* ---------- CONTACT ---------- */
+#contact a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--black);
+  color: #aab8cc;
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.85rem;
+}
+/* ---------- HAMBURGER MENU ---------- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--sky);
+  color: var(--sky);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+/* ---------- SMALL SCREENS (PHONES) ---------- */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav a:not(.logo) {
+    display: none;
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  nav.open a:not(.logo) {
+    display: block;
+  }
+
+  #home {
+    padding-top: 120px;
+  }
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.socials a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--sky);
+  color: var(--sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.socials a:hover {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* Brand colors on hover */
+.socials a.x:hover {
+  background: #000;
+  border-color: #fff;
+}
+.socials a.youtube:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+.socials a.linkedin:hover {
+  background: #0a66c2;
+  border-color: #0a66c2;
+}
+.socials a.github:hover {
+  background: #181717;
+  border-color: #fff;
+}
+.socials a.facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+}
+.socials a.whatsapp:hover {
+  background: #25d366;
+  border-color: #25d366;
+}
+.socials a.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  border-color: transparent;
+}
+
+/* ---------- PROJECTS ---------- */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+#projects > h2 {
+  grid-column: 1 / -1;
+}
+
+.card-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.card-links a {
+  margin-top: 0;
+}
+
+article.coming-soon {
+  background: transparent;
+  border: 2px dashed var(--blue);
+  box-shadow: none;
+}
+/* ---------- SECTION PHOTOS ---------- */
+.section-photo {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(10, 26, 51, 0.25);
+}
+/* ---------- LESSON CARD PHOTOS ---------- */
+.card-photo {
+  display: block;
+  width: calc(100% + 56px);
+  max-width: none;
+  height: 200px;
+  object-fit: cover;
+  margin: -28px -28px 6px;
+  border-radius: 6px 6px 0 0;
+}
+
+/* ---------- CONTACT PHOTO POSITION ---------- */
+#contact .section-photo {
+  object-position: center 10%;
+}
